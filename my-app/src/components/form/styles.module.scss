@@ -1,0 +1,108 @@
+@import '../../styles/helpers/helpers';
+
+.form-container {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: $dark-secondary-color;
+  color: $dark-text-color;
+  border-radius: 5px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.form-label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+  display: flex;
+  flex: 1
+
+}
+
+.form-input {
+  height: 1.5rem;
+  padding: 0.5rem;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  font-size: 1.1rem;
+  outline: none;
+  display: flex;
+  flex: 1
+}
+
+.form-submit-btn {
+  width: 96px;
+  background-color: $dark-accent-color;
+  color: $dark-text-color;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+
+  display: inline-block;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  vertical-align: middle;
+
+}
+
+.form-submit-btn:hover {
+  background-color: darken($dark-accent-color, 10%);
+}
+
+.flip-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  font-size: 1rem;
+  color: $dark-text-color;
+
+  span {
+    margin-right: 3px;
+  }
+
+  .flip-form-link {
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $dark-accent-color;
+    text-decoration: underline;
+    font-style: italic;
+    vertical-align: bottom;
+    font-weight: bold;
+    font-size: 1rem;
+    padding-top: 0.4rem;
+  }
+
+  .flip-form-link:hover {
+    color: $dark-accent-color-2;
+  }
+}
