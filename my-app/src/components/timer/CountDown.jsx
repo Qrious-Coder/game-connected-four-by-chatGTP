@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Countdown = ({ eventDate }) => {
+const Countdown = ({ isPermanent, eventDate }) => {
   const [timeRemaining, setTimeRemaining] = useState({});
 
   useEffect(() => {
@@ -38,6 +38,7 @@ const Countdown = ({ eventDate }) => {
 
   return (
     <div>
+    { isPermanent === 1 ? (
       {/* Check if all properties of timeRemaining are zero */}
       {timeRemaining.days === 0 && timeRemaining.hours === 0 && timeRemaining.minutes === 0 && timeRemaining.seconds === 0 ? (
         <span>{formattedEventDate}</span>
@@ -48,7 +49,8 @@ const Countdown = ({ eventDate }) => {
           {formatTime(timeRemaining.minutes)}:
           {formatTime(timeRemaining.seconds)}
         </span>
-      )}
+      )} )
+      : 'Show other stuff'
     </div>
   );
 };
